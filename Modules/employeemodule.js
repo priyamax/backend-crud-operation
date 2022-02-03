@@ -11,17 +11,6 @@ module.exports.getUserModule= async (req,res)=>{
     }
 }
 
-module.exports.searchUserModule= async (req,res,firstname)=>{
-    try{
-    var data = await client.query('select * from users where firstname = ?',firstname);
-    res.send(data.rows);
-    }
-    catch(err){
-        console.log(err);
-        console.log('no users found');
-        res.status(500).send('no users found');
-    }
-}
 
 
 module.exports.createUserModule= async (req,res)=>{
