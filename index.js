@@ -12,7 +12,7 @@ client.connect();
 app.use('/',router);
 
 app.listen(3300, ()=>{
-    console.log("Sever is now listening at port 3000");
+    console.log("Sever is now listening at port 3300");
 })
 
 
